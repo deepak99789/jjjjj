@@ -87,10 +87,10 @@ st.title("Advanced Supply & Demand Zone Screener")
 script_type = st.selectbox("Select Script Type", ["FNO NIFTY50","NIFTY100","NIFTY200","NIFTY500"])
 num_base = st.slider("Number of Base Candles", 1, 6, 1)
 
-interval_option = st.selectbox("Select Interval", ["1min","5min","15min","30min","60min","75min","125min","1H","2H","4H","Daily","Weekly"])
+interval_option = st.selectbox("Select Interval", ["1min","5min","15min","30min","60min","1H","2H","4H","Daily","Weekly"])
 interval_dict = {"1min": Interval.in_1_minute,"5min": Interval.in_5_minute,"15min": Interval.in_15_minute,"30min": Interval.in_30_minute,
-                 "60min": Interval.in_1_hour,"75min": Interval.in_75_minute,"125min": Interval.in_125_minute,
-                 "1H": Interval.in_1_hour,"2H": Interval.in_2_hour,"4H": Interval.in_4_hour,"Daily": Interval.in_daily,"Weekly": Interval.in_weekly}
+                 "60min": Interval.in_1_hour,"1H": Interval.in_1_hour,"2H": Interval.in_2_hour,"4H": Interval.in_4_hour,
+                 "Daily": Interval.in_daily,"Weekly": Interval.in_weekly}
 selected_interval = interval_dict[interval_option]
 
 zone_type = st.selectbox("Zone Type", ["All","Supply","Demand"])
